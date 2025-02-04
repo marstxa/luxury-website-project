@@ -1,15 +1,17 @@
 import React from "react";
-import HeaderVideo from "./HeaderVideo";
+import VideoHeader from "./VideoHeader";
+import MarqueeComponent from "../marquee/marquee";
+
 
 function Header() {
   return (
     <div className="w-full max-h-screen">
-      <header className="w-full navbar max-h-64 h-28 flex items-center px-14">
+      <header className="w-full navbar max-h-64 h-[122px] flex items-center px-14">
         <div className="navbar-start">
           <h1 className="text-6xl w-48 logo">Lumière</h1>
         </div>
         <div className="navbar-center">
-          <ul className="menu menu-horizontal text-lg">
+          <ul className="menu menu-horizontal text-[14px]">
             <li>
               <a href="index.html">Home</a>
             </li>
@@ -57,8 +59,10 @@ function Header() {
         </div>
       </header>
 
-      <div className="w-full h-screen">
-        <HeaderVideo />
+      <div className="w-full h-[607px] relative flex overflow-x-hidden items-center justify-center pointer-events-none">
+        <VideoHeader />
+        <MarqueeComponent />
+        <div className="w-[1400px] h-11 border-t-2 border-white absolute z-1 top-10/12"></div>
       </div>
     </div>
   );
